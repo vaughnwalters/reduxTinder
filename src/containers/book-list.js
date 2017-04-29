@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 
 class BookList extends Component {
@@ -21,6 +21,9 @@ class BookList extends Component {
   }
 }
 
+// this function is the glue between react and redux
+// whenever our application state changes, this container will instantly re-render with a new list of books
+// and when it re-renders it will show up as this.props.books
 function mapStateToProps(state) {
   // whatever gets returned from here will show up as props inside of BookList
   return {
